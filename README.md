@@ -56,9 +56,11 @@ The dataset contains information for **7,043 telecom customers**, including:
 
 ---
 
-# SQL Analysis (Completed)
+## SQL Analysis (Completed)
 
-The SQL phase answers **17 real-world business questions**, progressing from descriptive analysis to executive-level business insights.
+The SQL phase consists of **17 business questions**, each implemented as a separate SQL script.
+
+The analyses progress from basic data exploration to executive-level business insights, including customer segmentation, retention analysis, revenue impact, and identification of high-risk customer profiles.
 
 ### Phase 1 — Data Understanding
 
@@ -204,29 +206,31 @@ Based on the analysis, the company should:
 customer-churn-analysis/
 │
 ├── data/
+│   └── customer_churn.csv
 │
 ├── sql/
-│   ├── 01_customer_overview.sql
-│   ├── 02_contract_analysis.sql
-│   ├── 03_internet_service_analysis.sql
-│   ├── 04_payment_method_analysis.sql
-│   ├── 05_customer_segmentation.sql
-│   ├── 06_tenure_analysis.sql
-│   ├── 07_online_security_analysis.sql
-│   ├── 08_tech_support_analysis.sql
-│   ├── 09_product_addon_analysis.sql
-│   ├── 10_retention_opportunity.sql
-│   ├── 11_revenue_impact.sql
-│   └── 12_high_risk_customer_profile.sql
+│   ├── 01_total_customers.sql
+│   ├── 02_churned_customers.sql
+│   ├── 03_overall_churn_rate.sql
+│   ├── 04_contract_types.sql
+│   ├── 05_contract_distribution.sql
+│   ├── 06_contract_churn_rate.sql
+│   ├── 07_internet_service_churn.sql
+│   ├── 08_customer_tenure_analysis.sql
+│   ├── 09_payment_method_churn.sql
+│   ├── 10_contract_internet_segmentation.sql
+│   ├── 11_customer_lifecycle_analysis.sql
+│   ├── 12_online_security_analysis.sql
+│   ├── 13_tech_support_analysis.sql
+│   ├── 14_product_addon_analysis.sql
+│   ├── 15_retention_opportunity_analysis.sql
+│   ├── 16_revenue_impact_analysis.sql
+│   └── 17_high_risk_customer_profile.sql
 │
 ├── findings.md
 ├── README.md
-│
 ├── python/
-│   └── (In Progress)
-│
 └── tableau/
-    └── (In Progress)
 ```
 
 ---
