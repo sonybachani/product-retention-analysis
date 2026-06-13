@@ -15,7 +15,7 @@ A telecommunications company is experiencing customer churn and wants to answer 
 * Which customers are most likely to churn?
 * What factors contribute to customer churn?
 * Which customer segments should be prioritized for retention?
-* How much recurring revenue is lost due to churn?
+* How much revenue is lost due to churn?
 * What actions can improve customer retention and reduce revenue loss?
 
 ---
