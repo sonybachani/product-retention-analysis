@@ -156,18 +156,18 @@ This segment shows churn rates exceeding 50% in some cases.
 
 ## 📁 Repository Structure
 customer-churn-analysis/
-│
+
 ├── data/
 │
 ├── sql/                  # 17 SQL scripts
 │
-├── findings.md           # detailed analysis
+├── findings.md          # detailed analysis
 │
 ├── README.md
 │
-├── python/               # in progress
+├── python/              # in progress
 │
-└── tableau/              # in progress
+└── tableau/             # in progress
 
 ---
 
