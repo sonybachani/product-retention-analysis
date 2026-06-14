@@ -1,134 +1,96 @@
-# Customer Churn Analysis & Retention Strategy
+# 📊 Customer Churn Analysis & Retention Strategy
 
-## 📌 Project Overview
-
-This project analyzes customer churn behavior for a telecom company using the IBM Telco Customer Churn dataset.
-
-The goal is to identify **key drivers of churn, high-risk customer segments, and revenue impact**, and translate these insights into actionable retention strategies using SQL-based analysis.
+### Turning telecom customer data into actionable retention strategy using SQL analytics
 
 ---
 
-## 🎯 Business Problem
+## 🎯 Problem Statement
 
-The company is facing high customer churn and wants to understand:
+Telecom companies lose customers due to churn, leading to significant revenue loss.
 
-- Which customers are most likely to churn?
-- What factors drive customer churn?
-- Which customer segments are high-risk?
-- What is the financial impact of churn?
-- What retention strategies can reduce churn?
+This project answers:
+- Why do customers churn?
+- Who is most likely to churn?
+- What factors drive churn?
+- What actions can reduce churn?
 
 ---
 
-## 📊 Dataset
+## ⚡ Key Impact
 
-**IBM Telco Customer Churn Dataset**
+- 7,043 customers analyzed
+- 1,869 customers churned
+- 26.54% churn rate
+- $139,130 monthly revenue impact
+- Majority churn occurs within first 12 months
 
-- 7,043 customers
-- Includes demographics, account details, services, billing, and churn status
+---
+
+## 🧠 What This Project Does
+
+- SQL-based customer churn analysis
+- Customer segmentation by contract, tenure, payment, and services
+- Identification of churn drivers
+- Revenue impact estimation using MonthlyCharges
+- High-risk customer profiling
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Tool       | Purpose |
-|------------|--------|
-| PostgreSQL | SQL-based business analysis |
-| Python     | EDA & visualization (in progress) |
-| Tableau    | Dashboard (in progress) |
+- PostgreSQL → Data analysis using SQL
+- Python → EDA & visualization (in progress)
+- Tableau → Dashboard (in progress)
 
 ---
 
-## 🧮 Analysis Approach
+## 📊 Key Insights
 
-The analysis is structured into four areas:
+### 1. Contract type is the strongest churn driver
+- Month-to-month: **42.71% churn**
+- Two-year: **2.83% churn**
 
-1. Customer Overview & Churn Measurement  
-2. Customer Segmentation (contract, tenure, payment, services)  
-3. Churn Driver Analysis (security, tech support, add-ons)  
-4. Business Impact (revenue + high-risk profiling)
-
----
-
-# 📈 Key Insights
-
-## 1. Overall Churn Rate
-- Total Customers: **7,043**
-- Churned Customers: **1,869**
-- Churn Rate: **26.54%**
-
-**Insight:**  
-More than 1 in 4 customers have churned, indicating a significant retention challenge.
+👉 Long-term contracts significantly improve retention.
 
 ---
 
-## 2. Contract Type is the Strongest Churn Driver
+### 2. Early tenure is the highest-risk period
+- 0–1 year churn: **47.44%**
 
-| Contract Type | Churn Rate |
-|--------------|-----------:|
-| Month-to-month | 42.71% |
-| One Year | 11.27% |
-| Two Year | 2.83% |
-
-**Insight:**  
-Month-to-month customers are significantly more likely to churn than long-term contract customers.
+👉 Most churn happens in the first year.
 
 ---
 
-## 3. Fiber Optic Customers Are High Risk
+### 3. Fiber optic customers churn more
+- Fiber optic: **41.89% churn**
 
-| Internet Service | Churn Rate |
-|------------------|-----------:|
-| Fiber optic | 41.89% |
-| DSL | 18.96% |
-| No Internet | 7.40% |
-
-**Insight:**  
-Fiber optic customers represent the highest-risk service segment.
+👉 Indicates service or pricing issues.
 
 ---
 
-## 4. Churn is Highest in Early Tenure
+### 4. Payment method influences churn
+- Electronic check users show highest churn
 
-| Tenure | Churn Rate |
-|--------|-----------:|
-| 0–1 Year | 47.44% |
-| 1–2 Years | 28.71% |
-| 2–3 Years | 21.63% |
-| 3–4 Years | 19.03% |
-| 4–5 Years | 14.42% |
-| 5–6 Years | 6.61% |
-
-**Insight:**  
-The first year of customer lifecycle is the most critical churn period.
+👉 Automated payments reduce churn risk.
 
 ---
 
-## 5. Key Services Improve Retention
-
-Customers with:
-- Online Security
-- Tech Support
-
-show significantly lower churn rates.
-
-**Insight:**  
-Support and security services strongly improve customer retention.
+### 5. Support services improve retention
+- Online Security and Tech Support significantly reduce churn
 
 ---
 
-## 6. Revenue Impact of Churn
+## 💰 Business Impact
 
-- Churned Customers: **1,869**
-- Monthly Revenue Impact: **$139,130**
-- Avg Monthly Charge (Churned): **$74.44**
+- Monthly revenue at risk: **$139,130**
+- Churned customers: **1,869**
+- Avg monthly charge per churned customer: **$74.44**
 
-**Insight:**  
-Churned customers represent significant monthly revenue contribution loss based on current billing.
+👉 Churn directly impacts recurring monthly revenue contribution.
 
 ---
 
-## 7. High-Risk Customer Profile
+## 🚨 High-Risk Customer Profile
 
 Customers most likely to churn:
 
@@ -136,59 +98,23 @@ Customers most likely to churn:
 - Fiber optic internet
 - Less than 1 year tenure
 - No Tech Support
-- Electronic Check payment method
+- Electronic check payment
 
-**Insight:**  
-This segment shows churn rates exceeding 50% in some cases.
+👉 This segment shows churn rates exceeding 50%.
 
 ---
 
 ## 💡 Business Recommendations
 
-- Focus retention efforts on Month-to-month customers in their first year
-- Promote Online Security and Tech Support through bundling
-- Encourage migration from Electronic Check to automatic payments
+- Convert month-to-month customers to long-term contracts
+- Improve onboarding experience in first 12 months
+- Promote Online Security and Tech Support bundles
+- Encourage automatic payment methods
 - Investigate Fiber optic customer experience issues
-- Build a churn prediction model using identified risk factors
-- Monitor churn and revenue impact using dashboards
-
----
-
-## 📁 Repository Structure
-customer-churn-analysis/
-
-├── data/
-│
-├── sql/                  # 17 SQL scripts
-│
-├── findings.md          # detailed analysis
-│
-├── README.md
-│
-├── python/              # in progress
-│
-└── tableau/             # in progress
-
----
-
-## 🚧 Project Status
-
-| Component | Status |
-|----------|--------|
-| SQL Analysis | ✅ Completed |
-| Business Insights | ✅ Completed |
-| Python EDA | 🚧 In Progress |
-| Tableau Dashboard | 🚧 In Progress |
-
----
-
-## 👤 Author
-
-**Sony Bachani**  
-Aspiring Data Scientist | Data Analyst
+- Build churn prediction model using identified risk factors
 
 ---
 
 ## 📌 Summary
 
-This project demonstrates how SQL can be used to transform raw customer data into **actionable business insights that support retention strategy and revenue impact analysis**.
+This project demonstrates how SQL can transform raw customer data into **business decisions that improve retention and reduce revenue loss**.
